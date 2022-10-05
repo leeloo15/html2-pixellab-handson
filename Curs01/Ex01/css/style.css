@@ -30,17 +30,118 @@ body {
   background-color: lightpink;
 }
 
-
-@media (max-width: 576px) {
-
+body > h1 {
+  display: none;
 }
+
+/* Adauga un element h2 deasupra casutelor si afiseaza-l intre rezolutiile de 500px si 1000px */
+body > h2 {
+  display: none;
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+  body > h2 {
+    display: block;
+  }
+}
+
+/* 1.Ascunde folosind proprietatea display casuta 2 pe rezolutiile mai mici de 576 */
+/* 12. Ascunde casuta 1 pentru rezolutiile mai mici de 576px */
+/* 15. Micsoreaza la 15 paddingul de pe elementul body pentru rezolutiile de sub 576px */
+@media (max-width: 576px) {
+  body {
+    padding: 15px;
+  }
+  .box-1 {
+    display: none;
+  }
+  .box-2 {
+    display: none;
+  }
+}
+
+/* 16. Creeaza un element h3 sub casute si aﬁseaza-l pentru rezolutiile MAI MARI de 576px (min-width) */
+@media (min-width: 576px) {
+  body > h3 {
+    display: block;
+  }
+}
+
+/* 17. Coloreaza rosu acest nou element pentru rezolutiile mai mari de 1000px */
+
+@media (min-width: 1000px) {
+  body > h3 {
+    color: red;
+  }
+}
+
+/* 18. Ascunde din nou elementul nou pentru rezolutiile mai mari de 1200px */
+/* DRAGOS: nu mi se valideaza exercitiul si nu stiu de ce. Mai jos e mesajul din pixellab */
+/*Documentul trebuie sa contina un element h3 care este ascuns pentru rezolutiile mai mari de 1200px
+Nu am gasit in fisierul CSS style.css regula corecta pentru acest exercitiu. Incearca "body > h3". */
+@media (min-width: 1200px) {
+  body > h3 {
+    display: none;
+  }
+}
+
+/* In director se afla un fisier CSS cu trei media queries setate pentru trei breakpointuri diferite
+8.Adauga un element h1 in document, deasupra casutelor si afiseaza-l doar intre 600px si 1200px*/
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  body > h1 {
+    display: block;
+  }
+}
+
+/* 3.Coloreaza textul casutei 5 alb pe rezolutiile mai mici de 768px */
+/* 5.Schimba bordura casutei 3 in verde pentru rezolutiile mai mici de 768 */
 
 @media (max-width: 768px) {
-
+  .box-5 {
+    color: white;
+  }
+  .box-3 {
+    border-color: green;
+  }
 }
 
+/* 2.Ascunde casuta 4 pe rezolutiile mai mici de 992px */
+/* 13. Coloreaza bordura cu galben si textul casutei 2 albe pentru rezolutiile de pana in 992 */
 @media (max-width: 992px) {
-
+  .box-2 {
+    border-color: yellow;
+    color: white;
+  }
+  .box-4 {
+    display: none;
+  }
 }
 
+/* 4.Adauga un media query  si ascunde casuta 5 pe rezolutiile mai mari de 1200px */
 
+@media (min-width: 1200px) {
+  .box-5 {
+    display: none;
+  }
+  /* body > h1 {
+    display: none;
+  } */
+}
+
+/* 6.Ascunde casuta 3 pentru rezolutiile mai mari de 992px */
+/* 7.Schimba textul casutei 4 in rosu pentru rezolutiile mai mari de 992px */
+/* Documentul trebuie sa contina elementul cu clasa box-1 trebuie sa fie ascunsa la rezolutiile mai mari de 992px.
+-obs: nu regasesc in pdf-ul cursului 1, ex 01, problema legata de box 1 992px*/
+
+@media (min-width: 992px) {
+  .box-1 {
+    display: none;
+  }
+  .box-3 {
+    display: none;
+  }
+  .box-4 {
+    color: red;
+  }
+}

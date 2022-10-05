@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
   <title>Picture & srcset</title>
 
@@ -9,11 +13,48 @@
     rel="stylesheet"
     href="https://pixellab.ro/js/pixeltab/static/js/pixeltab.css"
   >
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
 </head>
 
 <body>
 
+  <!-- In director se afla un document HTML si un alt director cu imagini.
+Folosind elementul picture cu srcset, afiseaza:
+Imaginea de 300px pana in rezolutii de 600px;
+Imaginea de 500px pana in rezolutii de 768px;
+Imaginea de 900px pana in rezolutii de 992px;
+Imaginea de 1900 pentru alte rezolutii
+Folosind un media query in CSS centreaza elementul
+pentru toate rezolutiile in afara de cele mai mari de 992
+unde imaginea trebuie sa se intinda pe toata lungimea
+ecranului -->
 
+  <picture>
+    <source
+      media="(max-width: 600px)"
+      srcset="images/w300.png"
+    >
+
+    <source
+      media="(max-width: 768px)"
+      srcset="images/w500.png"
+    >
+
+    <source
+      media="(max-width: 992px)"
+      srcset="images/w900.png"
+    >
+
+    <img
+      src="images/w1900.png"
+      alt="blabla"
+    >
+  </picture>
 
   <div
     class="pixeltab-host"
