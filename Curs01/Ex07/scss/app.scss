@@ -1,0 +1,24 @@
+// Copiaza proiectul Sass in director ruleaza npm install, genereaza un fisier CSS din Sass si leaga fisierul CSS de cel HTML
+// Creeaza un mixin care sub rezolutiile de 500px sa ascunda casuta 2
+// Creeaza un mixin care peste rezolutiile de 501px sa faca fundalul verde pentru casuta 2
+
+@mixin mq-md-down {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mq-md-up {
+  @media (min-width: 501px) {
+    @content;
+  }
+}
+
+.box-2 {
+  @include mq-md-down() {
+    display: none;
+  }
+  @include mq-md-up() {
+    background-color: green;
+  }
+}

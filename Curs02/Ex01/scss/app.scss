@@ -1,3 +1,10 @@
-@import "variables";
-@import "partial1";
-@import "partial2";
+@import 'variables';
+@import 'partials/partial1';
+@import 'partials/partial2';
+@import 'partials/partial3';
+
+// Copiaza proiectul Sass in director ruleaza npm install, genereaza un fisier CSS din Sass si leaga fisierul CSS de cel HTML
+// Creaza in fisierul _partial1.scss o clasa brand care sa seteze culoarea brand-main pentru background si brand-neutral pentru text
+// Creaza in fisierul _partial2.scss o clasa brand-inverted in care culorile sa fie inversate fata de brand, dar seteaza variabila brand-main ca albastra
+// Creaza un fisier _partial3.scss si importa-l in app.scss;  in acest fisier, suprascrie culoarea brand-main in roz.
+// Creaza o clasa numita brand-special care sa aibe background variabila brand-main si brand-neutral pentru text

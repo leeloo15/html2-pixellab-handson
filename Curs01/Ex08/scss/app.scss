@@ -1,0 +1,110 @@
+// DRAGOS: ceva nu e in regula cu exercitiul asta..am doar 4 din 12 rezolvate, conf pixellab desi,
+// din punctul meu de vedere sunt rezolvate
+
+//1. Copiaza proiectul Sass in director ruleaza npm install, genereaza un fisier CSS din Sass si leaga fisierul CSS de cel HTML
+//2. Aplica o clasa squares pe primul div, seteaza-i latimea la 80%, o bordura neagra de 1px, si padding de 10px.
+// Acest div trebuie sa fie centrat.
+
+.squares {
+  width: 80%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+// 3.Creeaza o clasa square care sa redea un patrat de 200px cu bordura neagra de 1px si fundalul turcoaz
+
+.square {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: turquoise;
+}
+
+// 4.Creeaza clase square-magenta, square-peru si square-purple care sa seteze culoarea de fundal conform
+// numelor lor si sa extinda clasa square
+
+.square-magenta {
+  @extend .square;
+  background-color: magenta;
+}
+
+.square-peru {
+  @extend .square;
+  background-color: peru;
+}
+
+.square-purple {
+  @extend .square;
+  background-color: purple;
+}
+
+// DRAGOS: ceva nu e ok; pixellab imi zice:
+// Cerinta este: Documentul trebuie sa contina o clasa square care sa afiseze un patrat de 200px cu bordura neagra de 1px si fundalul turcoaz
+// Nu am gasit in fisierul CSS style.css regula corecta pentru acest exercitiu. Incearca ".square".
+// 👎
+// Cerinta este: Documentul trebuie sa contina un element cu clasele square si .square-magenta cu fundal magenta.
+// Clasa square-magenta nu seteaza width 200px pe elementele pe care este aplicata.
+// 👎
+// Cerinta este: Documentul trebuie sa contina un element cu clasele square si .square-peru cu fundal peru.
+// Clasa square-peru nu seteaza width 200px pe elementele pe care este aplicata.
+// 👎
+// Cerinta este: Documentul trebuie sa contina un element cu clasele square si .square-purple cu fundal purple.
+// Clasa square-purple nu seteaza width 200px pe elementele pe care este aplicata.
+// desi toate sunt rezolvate si...am dat refresh :));
+
+// 5.Aplica aceste trei clase pe trei elemente div in divul squares
+
+// 6.Aplica clasa circles pe urmatorul div, centreaza-l, seteaza-i latimea la 80% si
+// aplica-i o bordura neagra solida de 1px
+
+.circles {
+  margin: auto;
+  width: 80%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+// 7.Creaza o clasa circle care sa redea un cerc de 200px de fundal maro si bordura neagra de 1px
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: brown;
+}
+
+//8. Creaza clase circle-red, circle-green, circle-blue care sa seteze culoarea de fundal conform numelor lor si sa extinda clasa circle
+
+.circle-red {
+  @extend .circle;
+  background-color: red;
+}
+
+.circle-green {
+  @extend .circle;
+  background-color: green;
+}
+
+.circle-blue {
+  @extend .circle;
+  background-color: blue;
+}
+
+// Dragos:  la fel si cu exercitiile cu circle, pixellabul imi zice:
+
+//Cerinta este: Documentul trebuie sa contina o clasa circle care sa afiseze un patrat de 200px cu bordura neagra de 1px si fundalul maro
+// Nu am gasit in fisierul CSS style.css regula corecta pentru acest exercitiu. Incearca ".circle".
+// 👎
+// Cerinta este: Documentul trebuie sa contina un element cu clasele circle si .circle-red cu fundal red.
+// Clasa square-red nu seteaza width 200px pe elementele pe care este aplicata.
+// 👎
+// Cerinta este: Documentul trebuie sa contina un element cu clasele circle si .circle-green cu fundal green.
+// Clasa square-green nu seteaza width 200px pe elementele pe care este aplicata.
+// 👎
+// Cerinta este: Documentul trebuie sa contina un element cu clasele circle si .circle-blue cu fundal blue.
+// Clasa square-blue nu seteaza width 200px pe elementele pe care este aplicata.
