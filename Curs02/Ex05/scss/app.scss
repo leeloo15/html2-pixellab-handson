@@ -9,3 +9,22 @@
   height: 150px;
   border: 1px solid #000;
 }
+
+// 1.Copiaza proiectul Sass in director ruleaza npm install, genereaza un fisier CSS din Sass si leaga fisierul CSS de cel HTML
+// 2.Folosind @for si keywordul to genereaza clase de forma box-01 (box-02... box-09)
+// pentru a stila elementele din primul rand, fiecare clasa trebuie sa ingroase cu 1px
+// bordura elementelor
+
+// 3.In mod similar folosind through, genereaza clase pentru randul urmator de elemente, astfel
+// incat elementele din pozitii pare sa aiba fundalul gri iar cele din pozitii impare sa aiba
+// bordura dotted de culoare la alegere.
+
+@for $i from 1 through 9 {
+  .box-#{$i} {
+    @if $i % 2 == 0 {
+      background-color: gray;
+    } @else {
+      border: 1px dotted blue;
+    }
+  }
+}
