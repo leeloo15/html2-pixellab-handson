@@ -48,3 +48,60 @@ body {
   color: #fff;
 }
 /* do not touch this */
+
+/* 1.Pentru cutia 1, ordoneaza numerele corect si in coloana si pozitioneaza-le in coltul de dreapta sus */
+
+.flex-container-01 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* 2.Pentru cutia 2, ordoneaza numerele corect si in coloana, centreaza-le pe orizontala cu spatiu egal
+intre ele si fata de marginile cutiei */
+
+.flex-container-02 {
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* 3.Pentru cutia 3, ordoneaza numerele corect si in coloana si pozitioneaza-le pe latura din stanga a cutiei
+cu primul si ultimul element lipite de laturile de sus si de jos */
+
+/* 👎
+Cerinta este: Documentul trebuie sa contina a treia cutie cu numerele ordonate corect, in coloana,
+si cutiile pozitionate pe latura din stanga a cutiei cu primul si ultimul element lipite de laturile de sus si de jos.
+A treia cutie nu are valoarea flex-end pentru proprietatea align-items */
+
+/* DRAGOS: eu pusesem flex-start; de ce imi cere Pixellab sa pun flex-end daca eu trebuie sa am cutiile pe latura
+din stanga si nu pe cea din dreapta? */
+
+.flex-container-03 {
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* 4.Pentru cutia 4, ordoneaza numerele corect si in coloana si pozitioneaza-le in coltul din stanga sus */
+
+.flex-container-04 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+/* 5.Pentru cutia 5, ordoneaza numerele corect si in coloana si centreaza-le orizontal si vertical */
+
+.flex-container-05 {
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 6.Pentru cutia 6, ordoneaza numerele corect si in coloana si centreaza-le pe verticala si aliniaza-le pe latura din dreapta a cutiei */
+
+.flex-container-06 {
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-end;
+}

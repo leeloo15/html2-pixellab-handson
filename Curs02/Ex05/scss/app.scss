@@ -15,6 +15,12 @@
 // pentru a stila elementele din primul rand, fiecare clasa trebuie sa ingroase cu 1px
 // bordura elementelor
 
+@for $i from 1 through 9 {
+  .box-0#{$i} {
+    border-width: $i * 1px;
+  }
+}
+
 // 3.In mod similar folosind through, genereaza clase pentru randul urmator de elemente, astfel
 // incat elementele din pozitii pare sa aiba fundalul gri iar cele din pozitii impare sa aiba
 // bordura dotted de culoare la alegere.

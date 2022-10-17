@@ -9,10 +9,21 @@
 }
 
 // 3.Genereaza pentru primul buton o clasa numita btn-primary care sa genereze culoarea textului mov
-
 @include btn-class('.btn-primary', 'color', purple);
+
 // 4.Genereaza pentru al doilea buton o clasa numita btn-secondary care sa genereze culoarea textului albastru
+@include btn-class('.btn-secondary', 'color', blue);
 
 // 5.Genereaza pentru al treilea buton o clasa numita btn-inverted care sa foloseasca pentru fundalul butonului valoarea transparent
-
 @include btn-class('.btn-inverted', 'background-color', transparent);
+
+//6. Genereaza pentru al patrulea buton o clasa numita btn-inverted-light care sa foloseasca pentru fundal culoarea lightgray
+@include btn-class('.btn-inverted-light', 'background-color', lightgray);
+
+// 7.Genereaza pentru ultimul buton o clasa  btn-tertiary care sa genereze culoarea textului verde
+@include btn-class('.btn-tertiary', 'color', green);
+
+// 8. Genereaza a clasa numita btn-text-gray care sa genereze culoarea textului gri.
+// 9. Creeaza un nou buton care sa aiba clasa btn-inverted si folosind si clasa btn-text-gray
+//  stileaza prin compozitie aceast buton
+@include btn-class('.btn-text-gray', 'color', gray);

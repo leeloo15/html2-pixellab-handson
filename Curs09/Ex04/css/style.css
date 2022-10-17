@@ -1,7 +1,7 @@
 /* do not touch this */
 .flex-container {
-  width: 85%; 
-  height: 200px; 
+  width: 85%;
+  height: 200px;
   border: 1px solid #000;
   margin: 25px auto;
   display: flex;
@@ -13,31 +13,110 @@
 }
 
 .flex-item {
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 75px; 
-  height: 75px; 
-  border: 1px solid red; 
+  width: 75px;
+  height: 75px;
+  border: 1px solid red;
   background-color: #000;
-  color: #fff; 
+  color: #fff;
   font-weight: bold;
   font-size: 22px;
 }
 
 .underlay {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   right: 0;
   background-color: lightblue;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: -1;
   font-size: 150px;
-  font-weight: bold; 
+  font-weight: bold;
   color: #fff;
 }
 /* do not touch this */
+
+/* 1.In cutia 1, aliniaza elementele pe latura de jos a acesteia, cu spatiu egal intre ele, si pozitioneaza elementul 3
+pe centrul cutiei folosind un selector de clasa  */
+
+/* DRAGOS: eu pusesem space-evenly pentru justify content insa pixellab imi cere: */
+/* 👎
+Cerinta este: Documentul trebuie sa contina prima cutie cu elementele pe latura de jos a acesteia, cu spatiu egal intre ele.
+Prima cutie nu are valoarea space-around pentru proprietatea justify-content. */
+
+.flex-container-01 {
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.flex-container-01 :nth-child(4) {
+  align-self: center;
+}
+
+/* 2. In cutia 2, aliniaza elementele central pe verticala si orizontala apoi intinde elementul patru folosind
+stretch folosind nth-child */
+
+.flex-container-02 {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-02 :nth-child(5) {
+  align-self: stretch;
+}
+
+/* 3.In cutia 3, aliniaza elementele in coltul din dreapta jos a cutiei si aliniaza primul element pe latura de sus
+a cutiei folosind nth-of-type  */
+
+.flex-container-03 {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flex-container-03 :nth-of-type(2) {
+  align-self: flex-start;
+}
+
+/* DRAGOS: merge si cu align-self: start; care e diferenta intre flex-start si start pentru align-self? */
+
+/* 4.In cutia 4, aliniaza elementele pe latura de jos a cutiei si centrate pe orizontala si aliniaza ultimul
+element pe centru, folosind last-child */
+
+.flex-container-04 {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.flex-container-04 :last-child {
+  align-self: center;
+}
+
+/* 5. In cutia 5, aliniaza elementele central pe verticala, folosind space-between pe orizontala si intinde
+al treilea element folosind un selector de id */
+
+.flex-container-05 {
+  align-items: center;
+  justify-content: space-between;
+}
+
+#blabla {
+  align-self: stretch;
+}
+
+/* 6. In cutia 6, aliniaza elementele in coltul din dreapta sus apoi aliniaza elementul 3 pe latura de jos a cutiei
+folosind un selector de clasa*/
+
+.flex-container-06 {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.flex-container-06 :nth-child(4) {
+  align-self: flex-end;
+}

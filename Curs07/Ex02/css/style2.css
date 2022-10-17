@@ -1,0 +1,39 @@
+/* 2.Creaza alt document cu un div similar. Acest div se va deplasa
+spre margina de jos a ferestrei,
+apoi spre cea din dreapta,
+apoi spre cea de sus,
+apoi pe diagonala in coltul din stanga jos,
+apoi in pozitia initiala. */
+
+body {
+  margin: 0%;
+  padding: 0;
+}
+
+.box-2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: block;
+}
+
+@keyframes travel2 {
+  20%,
+  80% {
+    transform: translate(0, calc(100vh - 100px));
+  }
+  40% {
+    transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+  }
+  60% {
+    transform: translate(calc(100vw - 100px), 0);
+  }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.box-2 {
+  animation: travel2 10s ease-out;
+}

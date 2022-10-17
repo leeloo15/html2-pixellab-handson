@@ -1,0 +1,138 @@
+/* 1.Creaza o animatie de tip loader, care afiseaza pe centrul ecranului textul loading care apare si dispare.  */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loader {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  animation: blink 0.8s linear infinite alternate forwards;
+}
+
+/* 2.Adapteaza exemplul anterior astfel incat in loc sa apara si sa dispara, textul sa isi schimbe culoarea din alb in negru. */
+/* 3.Creaza o animatie de tip loader, care afiseaza pe centru ecranului trei patrate negre de 15px fiecare urca alternativ cate 10px apoi coboara in pozitia initiala  */
+/* 4.Adapteaza exemplul anterior astfel incat cutiile sa faca miscarea similara dar pe orizontala  */
+/* 5.Creaza o animatie de tip spinner, in care un arc de cerc rosu se invarte pe un cerc de fundal gri */
+
+@keyframes bounce {
+  from {
+    transform: translatey(0);
+  }
+
+  to {
+    transform: translatey(-16px);
+  }
+}
+
+/* daca nu puneam y, la 'to' venea 16px, dar nu cu minus */
+
+.loader-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.loader-dots .box {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: brown;
+  border-radius: 50%;
+  animation: bounce 0.8s linear infinite alternate forwards;
+}
+
+.loader-dots .box:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loader-dots .box:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes blink2 {
+  from {
+    color: white;
+  }
+
+  to {
+    color: black;
+  }
+}
+
+.loader2 {
+  animation: blink2 1.2s linear infinite alternate forwards;
+  font-size: 30px;
+}
+
+.loader-box-abc {
+  display: flex;
+  gap: 8px;
+}
+
+@keyframes bounce-box-abc {
+  from {
+    transform: translatey(0);
+  }
+  to {
+    transform: translatey(10px);
+  }
+}
+
+.loader-box-abc .box {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  animation: bounce-box-abc 0.8s linear infinite alternate forwards;
+}
+
+.loader-box-abc .box:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loader-box-abc .box:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce-box-def {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+.loader-box-def {
+  display: flex;
+  gap: 8px;
+}
+
+.loader-box-def .box {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  animation: bounce-box-def 0.8s linear infinite alternate forwards;
+}
+/* DRAGOS:nu inteleg cum ar trebui sa arate animatia ca sa stiu la ce sa ajung */
+
+.loader-box-def .box:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loader-box-def .box:nth-child(3) {
+  animation-delay: 0.8s;
+}

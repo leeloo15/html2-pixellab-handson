@@ -17,15 +17,15 @@
 //pentru primele 5 elemente cu clasa .box din documentul html. La fiecare iteratie,
 // bordura fiecarui element trebuie sa se ingroase cu un pixel.
 
-// 3.In mod similar folosind to, genereaza clase de forma box-01 (box-02) pentru celelalte 5
-// element cu clasa .box din document. La fiecare iteratie, inaltimea si latimea lor trebuie
-// sa creasca cu 5 pixeli.
-
 @for $i from 1 through 5 {
   .box-#{$i} {
     border-width: $i * 1px;
   }
 }
+
+// 3.In mod similar folosind to, genereaza clase de forma box-01 (box-02) pentru celelalte 5
+// element cu clasa .box din document. La fiecare iteratie, inaltimea si latimea lor trebuie
+// sa creasca cu 5 pixeli.
 
 @for $i from 0 to 6 {
   .box-0#{$i + 1} {
@@ -34,13 +34,13 @@
   }
 }
 
+// 4.La final, genereaza folosind through, pentru ultimul rand de elemente, clase de felul
+// box-10 (box-20). Elementele din pozitii impare trebuie sa aibe fundalul gri.
+
 @for $i from 1 through 5 {
   .box-#{$i}0 {
-    @if $i %2 != 0 {
+    @if $i % 2 != 0 {
       background-color: gray;
     }
   }
 }
-
-// 4.La final, genereaza folosind through, pentru ultimul rand de elemente, clase de felul
-// box-10 (box-20). Elementele din pozitii impare trebuie sa aibe fundalul gri.

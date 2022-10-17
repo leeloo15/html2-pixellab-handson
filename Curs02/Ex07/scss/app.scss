@@ -20,3 +20,21 @@ $data: (
     color: $color;
   }
 }
+
+// 3.Genereaza clase de forma btn-bg-primary (btn-bg-secondary, etc…) pentru a putea seta proprietatea
+// background-color in functie de valorile date pe elementele din randul doi.
+
+@each $suffix, $color in $data {
+  .btn-bg-#{$suffix} {
+    background-color: $color;
+  }
+}
+
+// 4.Genereaza clase de forma text-primary (text-secondary) in mod similar pentru a seta proprietatea
+// color a elementelor din randul trei.
+
+@each $suffix, $color in $data {
+  .text-#{$suffix} {
+    color: $color;
+  }
+}
