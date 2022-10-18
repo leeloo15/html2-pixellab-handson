@@ -86,7 +86,10 @@ si marginile cutiei, apoi intinde elementul trei*/
 
 .flex-container-03 :nth-of-type(4) {
   align-self: stretch;
+  width: auto;
+  max-width: unset;
 }
+/* S-ar putea si cu .flex-container-03 div:nth-last-of-type(2)*/
 
 /* 4.In cutia 4 orienteaza elementele pe coloana, pozitioneaza-le pe latura din dreapta folosind space-between si folosind
 nth-child pozitioneaza ultimul element pe latura din stanga */
@@ -112,7 +115,10 @@ apoi intinde elementul trei*/
 
 .flex-container-05 :nth-child(4) {
   align-self: stretch;
+  width: auto;
+  max-width: unset;
 }
+/* .flex-container-05 div:nth-child(4) */
 
 /* 6. In cutia 6 orienteaza elementele pe coloana, pozitioneaza-le in coltul din stanga jos si pozitioneaza elementul 2 pe
 latura din dreapta a elementului*/
@@ -126,3 +132,5 @@ latura din dreapta a elementului*/
 .flex-container-06 :nth-child(3) {
   align-self: flex-end;
 }
+
+/* flex-container-06 > :first child + div + div - do not try this at home, insane, dar se poate*/

@@ -69,6 +69,7 @@ stretch folosind nth-child */
 
 .flex-container-02 :nth-child(5) {
   align-self: stretch;
+  height: auto;
 }
 
 /* 3.In cutia 3, aliniaza elementele in coltul din dreapta jos a cutiei si aliniaza primul element pe latura de sus
@@ -107,6 +108,7 @@ al treilea element folosind un selector de id */
 
 #blabla {
   align-self: stretch;
+  height: auto;
 }
 
 /* 6. In cutia 6, aliniaza elementele in coltul din dreapta sus apoi aliniaza elementul 3 pe latura de jos a cutiei

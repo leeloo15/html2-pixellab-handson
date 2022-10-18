@@ -75,10 +75,13 @@ si din dreapta, apoi seteaza flex-shrink: 2 pentru elementul 1 si flex-shrink: 3
 .flex-container-02 :nth-child(2) {
   flex-shrink: 2;
 }
+/*sau  .flex-container-02 > :nth-child(1) + div */
 
 .flex-container-02 :nth-child(4) {
   flex-shrink: 3;
 }
+
+/* sau .flex-container-02 :nth-last-of-type (2)  */
 
 /* 3. Pentru cutia 3, pozitioneaza elementele in coltul din dreapta jos si seteaza pentru elementul 2 flex-shrink:
 2 si pentru elementul 4 flex-shrink: 3 */

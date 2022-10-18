@@ -80,6 +80,8 @@
   flex-grow: 2;
 }
 
+/* .flex-container-03 div:nth-last-of-type (2) sau doar :nth-last-of-type (2)*/
+
 /* 4. In cutia 4, aliniaza elementele invers central pe verticala si intinde elementul 4 folosind flex-grow: 1*/
 
 .flex-container-04 {
