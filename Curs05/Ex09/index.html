@@ -24,6 +24,7 @@
       height: 120px;
       padding: 5px;
     }
+
   </style>
 
   <link
@@ -31,12 +32,17 @@
     href="https://pixellab.ro/js/pixeltab/static/js/pixeltab.css"
   >
 </head>
+<!-- 1.Pe rezolutia cea mai mica cutiile 1 si 2 trebuie sa aibe display inline-block iar cutiile 3 si 4 sa nu fie vizibile
+2.De la rezolutia sm in sus, cutiile 3 si  4 trebuie sa apara ca inline-block
+3.De la rezolutia md in sus cutiile 1 si 4 trebuie sa dispara
+4.De la rezolutia lg in sus cutiile 2 si 3 trebuie sa dispara iar 1 si 4 sa reapara ca block
+5.De la rezolutia xl in sus cutiile 2 si 3 vor avea display block-->
 
 <body>
-  <div class="box">1</div>
-  <div class="box">2</div>
-  <div class="box">3</div>
-  <div class="box">4</div>
+  <div class="box d-inline-block d-sm-inline-block d-md-none d-lg-block">1</div>
+  <div class="box d-inline-block d-lg-none d-xl-block">2</div>
+  <div class="box d-none d-sm-inline-block d-lg-none d-xl-block">3</div>
+  <div class="box d-none d-sm-inline-block d-md-none d-lg-block">4</div>
 
   <div
     class="pixeltab-host"

@@ -17,13 +17,54 @@
     rel="stylesheet"
     href="https://pixellab.ro/js/pixeltab/static/js/pixeltab.css"
   >
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
 </head>
 
+
+
+<!-- exercitiile sunt rezolvate si cu varianta noua si veche because old pixelltab: ml e margin left
+din varianta veche, iar ms e margin start din varianta noua -->
+
 <body>
-  <div class="box">1</div>
-  <div class="box">2</div>
-  <div class="box">3</div>
-  <div class="box">4</div>
+  <!--
+1.Pentru cutia 1 seteaza:
+Marginea stanga la 4
+Marginea sus la 2
+Paddingul general la 4
+1.Pentru cutia 1 seteaza:
+Marginea stanga la 0
+Marginea sus la 0
+Paddingul general la 0 -->
+  <div class="box ml-4 ms-4 mt-2 p-4 ml-md-0 mt-md-0 p-md-0">1</div>
+
+  <!-- 2.Pentru cutia 2 seteaza:
+Marginile de sus si de jos la 2
+2.Pentru cutia 2 seteaza:
+Marginea stanga la 4
+Paddingul general la 4 -->
+  <div class="box my-2 ml-md-4 ms-md-4 p-md-4">2</div>
+
+  <!-- 3.Pentru cutia 3 seteaza:
+Marginea stanga la 4
+Marginile de sus si de jos la 2
+Paddingul de sus si de jos la 2
+3.Pentru cutia 3 seteaza:
+Marginea stanga la 0
+Marginea sus la 0
+Paddingul general la 0 -->
+  <div class="box ml-4 ms-4 my-2 py-2 ml-md-0 mt-md-0 p-md-0">3</div>
+  <!--
+4.Pentru cutia 4 seteaza:
+Marginea de sus la 4
+4.Pentru cutia 4 seteaza:
+Marginea stanga la 4
+Paddingul general la 4
+-->
+  <!--  -->
+  <div class="box mt-4 ml-md-4 ms-md-4 p-md-4">4</div>
 
   <div
     class="pixeltab-host"
