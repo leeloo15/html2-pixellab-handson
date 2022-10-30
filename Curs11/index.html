@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Grid app</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 120px 1fr 36px;
+      grid-template-columns: 100px 1fr 100px;
+    }
+
+    .top-bar {}
+
+    .main {}
+
+    .side-bar {}
+
+    .right-bar {}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div
+      class="top-bar"
+      style="background-color: lightblue;"
+    ></div>
+    <div
+      class="main"
+      style="background-color: lightpink;"
+    ></div>
+
+    <div
+      class="side-bar"
+      style="background-color: brown;"
+    ></div>
+    <div
+      class="right-bar"
+      style="border-color: lightcoral;"
+    ></div>
+  </div>
+</body>
+
+</html>

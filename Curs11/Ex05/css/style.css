@@ -22,3 +22,33 @@
 }
 
 /* can't touch this 🔨 */
+
+/*
+1.Creaza un grid cu sase coloane dupa cum urmeaza: 120px 1fr 20% 315px 200px 2fr
+2.Adauga  cinci randuri dupa cum urmeaza: 100px 75px 200px 150px 75px
+3.Intinde primul element de la prima linie verticala pe 4 celule folosind cuvantul span
+4.Intinde al doilea element de la liniia verticala -2 la -1 apoi de la linia orizontala 1 la 4
+5.Intinde al treilea element de la linia verticala 1 la 4 apoi de la linia orizontala 2 la 5
+6.Intinde al patrulea element de la linia verticala 3 pe 3 celule folosind cuvantul span apoi de la linia orizontala -3 la -1
+ */
+
+/* 1 si 2 */
+.grid-container {
+  display: grid;
+  grid-template-columns: 120px 1fr 20% 315px 200px 2fr;
+  grid-template-rows: 100px 75px 200px 150px 75px;
+}
+
+/* 3 */
+.grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
+/* 6 */
+.grid-item-4 {
+  grid-column-start: 3;
+  grid-column-end: span 3;
+  grid-row-start: -3;
+  grid-row-end: -1;
+}

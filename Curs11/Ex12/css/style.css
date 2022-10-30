@@ -17,3 +17,24 @@
   background-color: lightgreen;
 }
 /* can't touch this 🔨 */
+
+/*
+1.Creaza un grid de 4 x 4 cu celule de 100px
+2.Folosind grid-area intinde elementul 1 intre liniile verticale 1 si 3 apoi intre liniile orizontale 1 si 3
+3.In mod similar intinde elementul 2 intre linile verticale 1 si 5 apoi intre liniile orizontale 4 si 5
+4.Intinde elementul 3 intre linile verticale 1 si 5 si intre linile orizontale 3 si 4
+ */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+}
+
+.grid-item-1 {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.grid-item-2 {
+  grid-area: 4 / 1 / 5 / 5;
+}
