@@ -18,7 +18,7 @@
 }
 
 .grid-item-4 {
-  background-color: lightsalmon
+  background-color: lightsalmon;
 }
 
 .grid-item-5 {
@@ -26,3 +26,63 @@
 }
 /* can't touch this 🔨 */
 
+/*
+1.Creaza un grid cu urmatoarele coloane 140px 500px 320px 25%
+2.Adauga si urmatoarele randuri 120px 80px 120px 120px 90px
+ */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 140px 500px 320px 25%;
+  grid-template-rows: 120px 80px 120px 120px 90px;
+}
+
+/* 3 Intinde elementul 1 de la linia verticala 1 cu 2 celule folosind cuvantul span apoi
+de la linia orizontala 1 cu 2 celule folosind span*/
+/* 7.Pozitioneaza elementul 1 in coltul din stanga sus */
+
+.grid-item-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  justify-self: start;
+  align-self: start;
+}
+
+/* 4.Intinde elementul 2 intre linia verticala 1 si linia verticala 4 apoi cu o celula de la linia orizontala 2 folosind span */
+/* 8. Aliniaza elementul 2 pe latura din stanga, centrat vertical*/
+
+.grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  justify-self: start;
+  align-self: center;
+}
+
+/* 9. Aliniaza elementul 3 in coltul din dreapta jos */
+
+.grid-item-3 {
+  justify-self: end;
+  align-self: end;
+}
+
+/* 5.Intinde elementul 4 intre linia verticala 1 si linia verticala 3, apoi de la linia orizontala -3 la -1  */
+/* 10. Aliniaza elementul 4 centrat pe verticala si orizontala */
+
+.grid-item-4 {
+  grid-column: 1 / 3;
+  grid-row: -3 / -1;
+  justify-self: center;
+  align-self: center;
+}
+
+/* 6.Intinde elementul 5 de la linia verticala -2 cu o celula folosind span apoi intre linia orizontala 1 si -1*/
+/* 11.Aliniaza elementul 5 centrat pe orizontala si pe latura de jos  */
+
+.grid-item-5 {
+  grid-column: -2 / span 1;
+  grid-row: 1 / -1;
+  justify-self: center;
+  align-self: end;
+}

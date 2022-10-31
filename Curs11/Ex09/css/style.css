@@ -36,3 +36,49 @@
 .grid-item-5 {
   grid-column: 1 / span 2;
 }
+
+/* 1. Ordoneaza numerele din fisierele din director*/
+
+.grid-container:nth-child(1) .grid-item-1 {
+  order: -2;
+}
+
+.grid-container:nth-child(1) .grid-item-4 {
+  order: -1;
+}
+
+.grid-container:nth-child(2) .grid-item-2 {
+  order: 1;
+}
+
+.grid-container:nth-child(2) .grid-item-1 {
+  order: 2;
+}
+
+.grid-container:nth-child(2) .grid-item-4 {
+  order: -1;
+}
+
+.grid-container:nth-child(3) .grid-item-3 {
+  order: -3;
+}
+
+.grid-container:nth-child(3) .grid-item-5 {
+  order: -2;
+}
+
+.grid-container:nth-child(3) .grid-item-2 {
+  order: -1;
+}
+
+.grid-container:nth-child(3) .grid-item-4 {
+  order: 1;
+}
+
+.grid-container:nth-child(4) .grid-item-2 {
+  order: 2;
+}
+
+.grid-container:nth-child(4) .grid-item-3 {
+  order: 1;
+}

@@ -20,17 +20,36 @@
     .container {
       display: grid;
       height: 100vh;
+      grid-template-columns: 120px 1fr 80px;
       grid-template-columns: 120px 1fr 36px;
-      grid-template-columns: 100px 1fr 100px;
+      grid-template-rows: 100px 1fr 100px;
     }
 
-    .top-bar {}
+    .top-bar {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
 
-    .main {}
+    .main {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
 
-    .side-bar {}
+    .side-bar {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: -1;
+    }
 
-    .right-bar {}
+    .right-bar {
+      grid-column-start: -2;
+      grid-column-end: -1;
+      grid-row-start: 1;
+      grid-row-end: -1;
+    }
 
   </style>
 </head>
@@ -48,11 +67,11 @@
 
     <div
       class="side-bar"
-      style="background-color: brown;"
+      style="background-color:brown"
     ></div>
     <div
       class="right-bar"
-      style="border-color: lightcoral;"
+      style="background-color:coral"
     ></div>
   </div>
 </body>

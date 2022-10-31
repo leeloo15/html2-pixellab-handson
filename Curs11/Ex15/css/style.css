@@ -25,3 +25,73 @@
   background-color: lightsteelblue;
 }
 /* can't touch this 🔨 */
+
+/* 1.Creaza un grid mobile first, centrat cu max-width: 1920 si width: 100% dupa urmatoarea matrice:
+header
+filters
+content
+sidebar
+footer */
+
+.grid-container {
+  display: grid;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-areas: 'header filters content sidebar footer';
+}
+
+/* 3.Asociaza primul element cu zona header */
+
+.grid-item-1 {
+  grid-area: header;
+}
+
+/* 4. Asociaza al doilea element cu zona filters*/
+
+.grid-item-2 {
+  grid-area: filters;
+}
+
+/* 5.Asociaza al treilea element cu zona content */
+
+.grid-item-3 {
+  grid-area: content;
+}
+
+/* 6.Asociaza al patrulea element cu zona sidebar */
+/* 2.Sidebarul este ascuns pe mobil */
+
+.grid-item-4 {
+  grid-area: sidebar;
+  display: none;
+}
+
+/* 7.Asociaza al cincilea element cu zona footer*/
+
+.grid-item-5 {
+  grid-area: footer;
+}
+
+/* 8.Pentru rezolutiile mai mari de 800 de pixeli, configureaza gridul dupa matricea:
+header header header
+sidebar . filters
+sidebar . content
+footer footer footer
+*/
+/* 9.Configureaza gridul cu urmatoarele coloane  pentru aceasta rezolutie */
+
+@media (min-width: 800px) {
+  .grid-container {
+    grid-template-areas:
+      'header header header'
+      'sidebar . filters'
+      'sidebar . content'
+      'footer footer footer';
+    grid-template-columns: 400px 10px 1fr;
+  }
+  .grid-item-4 {
+    grid-area: sidebar;
+    display: block;
+  }
+}

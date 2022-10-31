@@ -71,12 +71,14 @@ body {
   grid-area: footer;
 }
 
-/* 7. Pe rezolutiile mai mici de 768px, specifica zonele de footer si sidebar in asa fel incat sidebarul sa se intinda pana jos, respectiv matricea:
+/* 7. Pe rezolutiile mai mici de 768px, specifica zonele de footer si sidebar in asa fel incat
+sidebarul sa se intinda pana jos, respectiv matricea:
 header header header header
 sidebar . content content
 sidebar . content content
 sidebar footer footer footer
-8. Pe rezolutile mai mici de 520px aseaza zonele pe o singura coloana, astfel incat continutul sa fie deasupra sidebarului, respectiv matricea:
+8. Pe rezolutile mai mici de 520px aseaza zonele pe o singura coloana, astfel incat continutul sa fie
+deasupra sidebarului, respectiv matricea:
 header
 content
 sidebar
