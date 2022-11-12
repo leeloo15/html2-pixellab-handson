@@ -1,0 +1,62 @@
+/*
+1.In documentul din fisier creaza un grid cu o clasa de css grid-container-1 care sa aibe inaltimea de 350px,
+acest grid sa aibe 3 coloane si 3 randuri de 45px, folosind functia repeat.
+In coltul din stanga sus si dreapta jos al acestui grid, plaseaza doua elemente
+(grid-item-1 si grid-item-2) cu fundalul lightblue.
+Pozitioneaza matricea rezultata in dreapta jos folosind justify-content si align-content.
+
+2.Creaza un grid identic si plaseaza matricea centrata vertical si orizontal
+3.Creaza un grid identic si plaseaza matricea centrata orizontal pe latura inferioara a containerului
+4.Creaza un grid identic si plaseaza matricea in coltul din stanga sus
+5.Creaza un grid identic si plaseaza matricea pe latura superioara, centrata orizontal
+6.Creaza un grid identic si plaseaza matricea pe latura din dreapta, centrata vertical
+ */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 45px);
+  grid-template-rows: repeat(3, 45px);
+  height: 350px;
+}
+
+.grid-item-1 {
+  background-color: lightblue;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.grid-item-2 {
+  background-color: lightblue;
+  grid-column: -2 / -1;
+  grid-row: -2 / -1;
+}
+
+.grid-container-1 {
+  justify-content: end;
+  align-content: end;
+}
+
+.grid-container-2 {
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-container-3 {
+  justify-content: center;
+  align-content: end;
+}
+
+.grid-container-4 {
+justify-content: start;
+align-content: start;
+}
+
+.grid-container-5 {
+  justify-content: center;
+  align-content: start;
+}
+
+.grid-container-6 {
+  justify-content: end;
+  align-content: center;
+}

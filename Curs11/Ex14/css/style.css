@@ -36,6 +36,7 @@ footer
 */
 
 .grid-container {
+  grid-template-rows: repeat(4, 200px);
   display: grid;
   grid-template-areas: 'header' 'content' 'sidebar' 'footer';
   max-width: 1920px;
@@ -83,3 +84,5 @@ footer footer footer
       'footer footer footer';
   }
 }
+
+/* exercitiul e facut asa pentru ca dragos a vrut sa ne aduca aminte ca media querys sunt inclusive */
